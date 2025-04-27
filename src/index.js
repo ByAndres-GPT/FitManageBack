@@ -33,7 +33,7 @@ db.authenticate()
   .then(() => console.log("Databse connection successful"))
   .catch((error) => console.log("Connection error: ", error));
 
-app.listen(process.env.PUERTO, () => {
+app.listen(process.env.PORT, () => {
   console.log(`API escuchando en http://localhost:${process.env.PUERTO}`);
 });
 
