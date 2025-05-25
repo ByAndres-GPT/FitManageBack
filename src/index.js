@@ -1,6 +1,6 @@
 import express from "express";
 import os from "os";
-const port = process.env.PUERTO || 3000;
+const port = process.env.PORT || 3000;
 import Cliente from "./models/Cliente.js";
 import Administrador from "./models/Administrador.js";
 import Membresia from "./models/Membresia.js";
@@ -57,8 +57,8 @@ for (let name in interfaces) {
   }
 }
 
-app.listen(process.env.PUERTO, () => {
-  console.log(`API escuchando en http://localhost:${process.env.PUERTO}`);
+app.listen(process.env.PORT, () => {
+  console.log(`API escuchando en http://localhost:${process.env.PORT}`);
 });
 
 app.get("/", (req, res) => {
